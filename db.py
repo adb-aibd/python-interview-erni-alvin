@@ -1,6 +1,8 @@
-from dotenv import load_dotenv
-from sqlalchemy.engine import URL
 import os
+
+from dotenv import load_dotenv
+from sqlalchemy.engine import URL, create_engine
+from functools import cache
 
 load_dotenv()
 
@@ -28,3 +30,8 @@ def sqlalchemy_url_from_env() -> URL:
             port=db_port,
             database=db_name,
         )
+
+
+@cache
+def get_engine():
+    return create_engine(sqlalchemy_url_from_env())
