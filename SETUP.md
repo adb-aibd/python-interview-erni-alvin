@@ -1,0 +1,12 @@
+Prerequisites
+---
+1. Use a Linux OS / WSL
+1. Install uv https://docs.astral.sh/uv/getting-started/installation/
+
+How to run
+---
+1. Clone this repo
+2. Go to the root of this repo and run `uv sync`
+3. Run `uv run alembic upgrade head` in order to initialize database schema and currency table
+4. Run `uv run fastapi dev main.py`
+5. Access http://localhost:8000
