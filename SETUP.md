@@ -10,3 +10,7 @@ How to run
 3. Run `uv run alembic upgrade head` in order to initialize database schema and currency table
 4. Run `uv run fastapi dev main.py`
 5. Access http://localhost:8000
+
+Unit tests
+---
+I was not able to finish with unit testing, but I have used some queries in `stuff.py` to test the views.
